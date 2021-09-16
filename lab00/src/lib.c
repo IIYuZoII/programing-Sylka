@@ -14,16 +14,16 @@ const char *get_animal_type_name(enum animal_type type)
 	const char *result;
 	switch (type) {
 	case CAT:
-		result = "Кіт";
+		result = "CAT";
 		break;
 	case DOG:
-		result = "Собака";
+		result = "DOG";
 		break;
 	case COW:
-		result = "Корова";
+		result = "COW";
 		break;
 	case PIG:
-		result = "Свиня";
+		result = "PIG";
 		break;
 	default:
 		result = "N/A";
