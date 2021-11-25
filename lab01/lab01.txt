@@ -1,0 +1,42 @@
+Автор: Силка М. М. КIТ-121Г лабораторна робота 01
+
+1. Знайшов, завантажив та інсталював додаток VirtualBox
+
+2. Завантажив та встановив образ Linux системи для подальшої роботи. Встановив Guest Additions
+
+3. Інсталював мінімально-необхідні пакети (програмні додатки): git, gcc, clang, clang-format, clang-tidy,
+   tree, make, cppcheck використовуючи пакетний менеджер apt-get
+
+4. За допомогою системи контролю версіями git та команди git clone виконав клонування проекту
+
+5. Ознайомився з утилітою tree
+
+6. Зкомпілював проект
+
+7. Виконав зміни у файлах lib.c  lib.h додавши новий тип тварини: "CHICKEN"
+
+8. Перекомпілював проект
+
+9. Виконнав зміни в Makefile:
+	- Додав ціль ціль all, яка буде виконувати цілі clean prep compile check;
+	- Перевірив роботу Makefile, шляхом виконання команди make all;
+	- Виконав зміни у Makefile таким чином, щоб файл test.bin не створювався; перевірив
+	  роботу виконаних змін;
+
+10. За допомогою команди git diff показав виконані зміни у файлах
+
+11. Визначив поточну версію утиліти clang та make. Скористався комбінаціями clang –version  
+    та make –version:
+	Clang version: 
+Ubuntu clang version 12.0.0-3ubuntu~21.04.1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+
+	Make version:
+GNU Make 4.3
+Built for x86_64-pc-linux-gnu
+Copyright (C) 1988-2020 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+Trere is NO WARRANTY, to the extent permitted by law.
