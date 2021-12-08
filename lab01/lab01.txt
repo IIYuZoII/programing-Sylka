@@ -40,3 +40,7 @@ Copyright (C) 1988-2020 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 This is free software: you are free to change and redistribute it.
 Trere is NO WARRANTY, to the extent permitted by law.
+
+
+Висновок: завдяки цій лабораторній роботі я навчився користуватися віртуальною машиною VirtualBox, встановлювати на віртуальну машину систему Linux та налагоджувати 
+її. Також я ознайомився з системою контролю версій git та навчився клонувати вже існуючий репозиторій з інтернету. Ознайомився з утилітою tree. Навчився компілювати проект
