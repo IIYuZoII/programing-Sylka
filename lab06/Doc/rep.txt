@@ -1,0 +1,92 @@
+Звіт
+Лабораторна робота №6. Масиви
+П.І.Б. виконавця: Силка Михайло Микалайович
+
+Хід роботи: 
+
+1) Створити папку lab06
+2) Створити в ній файл папку src з файлом main.c
+3) Зафіксувати зміни за допомогою команди git commit
+4) Описати в файлі main.c ціль та хід роботи
+5) Написати программу
+6) Перевірити значення змінних за допомогою дебаггеру lldb
+
+
+Результат перевірки значення змінних за допомогою дебаггеру lldb:
+
+
+
+yuzo@yuzo-VirtualBox:~/hw/hw_univers_programming/lab06$ lldb main.bin 
+(lldb) target create "main.bin"
+Current executable set to '/home/yuzo/hw/hw_univers_programming/lab06/main.bin' (x86_64).
+(lldb) b 727
+Breakpoint 1: where = main.bin`main + 9202 at main.c:727:5, address = 0x0000000000403532
+(lldb) r
+Process 5145 launched: '/home/yuzo/hw/hw_univers_programming/lab06/main.bin' (x86_64)
+
+Слово: ninety seven
+Process 5145 stopped
+* thread #1, name = 'main.bin', stop reason = breakpoint 1.1
+    frame #0: 0x0000000000403532 main.bin`main at main.c:727:5
+   724 		printf ("\nСлово: ");
+   725 		printf ("%s\n", m2);
+   726 	 
+-> 727 	    return (0);
+   728 	}
+(lldb) fr v
+(int) x = 97
+(int) x_is = 1
+(int) ten_type = 1
+(int) thous_num = 0
+(int) hun_num = 0
+(int) ten_num = 9
+(int) n_num = 7
+(int) space_count = 1
+(char [46]) array_num_words = "one,two,three,four,five,six,seven,eight,nine"
+(char [77]) array_irregular_ten_words = "eleven,twelve,thirteen,fourteen,fifteen,sixteen,seventeen,eighteen,nineteen"
+(char [59]) array_clean_ten_words = "ten,twenty,thirty,forty,fifty,sixty,seventy,eighty,ninety"
+(char [9]) word_thous = "thousand"
+(char [8]) word_hun = "hundred"
+(int) temp_count_letters_num_words = 0
+(int) count_letters_num_words = 5
+(int) count_words_num_words = 7
+(int) count_symbols_num_words = 34
+(int) temp_count_letters_irregular_ten_words = 0
+(int) count_letters_irregular_ten_words = 0
+(int) count_words_irregular_ten_words = 0
+(int) count_symbols_irregular_ten_words = 0
+(int) temp_count_letters_clean_ten_words = 0
+(int) count_letters_clean_ten_words = 6
+(int) count_words_clean_ten_words = 9
+(int) count_symbols_clean_ten_words = 58
+(int) temp_count_letters_num_hun_words = 0
+(int) count_letters_num_hun_words = 0
+(int) count_words_num_hun_words = 0
+(int) count_symbols_num_hun_words = 0
+(int) temp_count_letters_num_thous_words = 0
+(int) count_letters_num_thous_words = 0
+(int) count_words_num_thous_words = 0
+(int) count_symbols_num_thous_words = 0
+(int) temp_hun_or_thous = 0
+(int) len_m2 = 12
+(int) temp = 12
+(int) temp_left_num_words = 28
+(int) temp_right_num_words = 33
+(int) temp_left_irregular_ten_words = -1
+(int) temp_right_irregular_ten_words = -1
+(int) temp_left_clean_ten_words = 51
+(int) temp_right_clean_ten_words = 57
+(int) temp_left_num_hun_words = -1
+(int) temp_right_num_hun_words = -1
+(int) temp_left_num_thous_words = -1
+(int) temp_right_num_thous_words = -1
+(char) space = ' '
+(char) spec_symbol_end = '\0'
+(char [5]) word_for_zero = "zero"
+(char []) m2 = ([0] = 'n', [1] = 'i', [2] = 'n', [3] = 'e', [4] = 't', [5] = 'y', [6] = ' ', [7] = 's', [8] = 'e', [9] = 'v', [10] = 'e', [11] = 'n', [12] = '\0')
+
+Результуюча строка містисть у собі слова ninety seven і нічого крім цих слів, ці слова = числу 97 записанному у змінній х, а значить код працює відмінно
+
+
+Висновок: завдяки цій лабораторній роботі, я почав краще розуміти роботу массивів і особливо строкових змінних у язику С. Я отримав нові навички роботи зі строками та
+циклічними конструкціями, а також вдосконалив навички роботи з багаторівневими конструкціями перевірок if, else if, else
