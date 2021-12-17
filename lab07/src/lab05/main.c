@@ -11,9 +11,8 @@ int main (int argc, char** argv){
 
     int x;
 
-    int tf;
-    //x = rand()%100;
-
+    int tf; // 0 - True;  1 - False
+    
 	if (argc == 1){
 		srand(time(NULL));
 		x = rand()%100;
@@ -21,10 +20,9 @@ int main (int argc, char** argv){
 	} else {
 		tf = cycle_for((int)strtod(argv[1], 0));
 	}
-    //tf = cycle_for(x);
 
 
-    //int sec_tf_for = cycle_for(rand()%100);
+    
 
     //Вызов функции которая выводит результат в консоль
     printf("%d", tf);
