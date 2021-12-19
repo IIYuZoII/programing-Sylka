@@ -2,16 +2,18 @@
 // послідовності чисел таких пар, у котрих перше число менше наступного, використовуючи
 // функцію
 
-
+#include <stdlib.h>
+#include <time.h> 
 
 //Скелет функции
 int get_count (int arr[], int len);
 
 
-int main (){
+int main (int argc, char** argv){
     int len = 6;
 
-    int arr[] = {6, 5, 4, 3, 2, 1};
+    int arr[] = {5, 5, 5, 5, 5, 5};
+    // if(ar)
     int count = get_count(arr, len);   
 
     return (0);
@@ -23,8 +25,8 @@ int get_count (int arr[], int len){
     int temp_count = 0;
 
     //Перебор массива
-    for (int i = 0; i < len; i++){
-        if (arr[i] > arr[i+1]){
+    for (int i = 0; i < len-1; i++){
+        if (arr[i] < arr[i+1]){
             temp_count++;
         }
     }
