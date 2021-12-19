@@ -16,7 +16,6 @@
  * @date 18-dec-2021
  * @version 1.0
  */
-#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
@@ -50,14 +49,6 @@ int main (int argc, char** argv){
 	} else {
 		tf = cycle_for((int)strtod(argv[1], 0));
 	}
-
-
-    
-
-    //Вызов функции которая выводит результат в консоль
-    printf("%d", tf);
-
-
 
     return (0);
 }

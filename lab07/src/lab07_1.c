@@ -13,8 +13,18 @@ int main (int argc, char** argv){
     int len = 6;
 
     int arr[] = {5, 5, 5, 5, 5, 5};
-    // if(ar)
-    int count = get_count(arr, len);   
+    if(argc == 1){
+        srand(time(NULL));
+	for (int i = 0; i < len; i++){
+	    arr[i] = rand()%100;
+	}
+    } else {
+    	for (int i = 1; i < len + 1; i++){
+    	    arr[i - 1] = (int)strtod(argv[i], 0);
+    	}
+    }
+    
+    int count = get_count(arr, len);
 
     return (0);
 
@@ -26,7 +36,7 @@ int get_count (int arr[], int len){
 
     //Перебор массива
     for (int i = 0; i < len-1; i++){
-        if (arr[i] < arr[i+1]){
+        if (arr[i] < arr[i+1] && i + 1 < len){
             temp_count++;
         }
     }
