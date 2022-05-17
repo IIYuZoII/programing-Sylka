@@ -1,6 +1,6 @@
 /**
  * @file test.c
- * @brief Файл з тестом на реалізацію функції пошуку повторів
+ * @brief Файл з тестом на реалізацію функції визначення транспонованої матриці
  *
  * @author Sylka Michael
  * @date 17-may-2022
@@ -9,50 +9,28 @@
 
 #include "../src/lib.h"
 #include <check.h>
-#include <stdlib.h>
-
 
 /**
- * Верифікація роботи функції {@link get_count}
+ * Верифікація роботи функції {@link find_count_words_in_line}
  * на основі вхідних та очікуваних даних
  *
  * @return стан проходження тестів: 1 - тести пройшли успішно, 0 - частина
  * тестів не пройшла
  */
-START_TEST(test_get_count) {
-  int *a = NULL;
-  int *r = NULL;
-
-  int actual = 0;
-  int expected[] = {2, 5, 3, 4};
-
-  unsigned v_f_c, i, size = 9;
-
-  a = (int *)malloc(size * sizeof(int));
-  r = (int *)malloc(128);
-
-  for (i = 0; i < size; i++) {
-    if (i % 2 == 0) {
-      *(a + i) = 2;
-    } else {
-      *(a + i) = 3;
-    }
-  }
-
-  get_count(a, size, r, &v_f_c);
-
-  for (i = 0; i < v_f_c; i++) {
-    actual = *(r + i);
-    ck_assert_int_eq(actual, expected[i]);
-  }
+START_TEST(test_find_count_words_in_line) {
+  char data_a[] = "PFkfeew wepfkw oewofjewf wefwiepfn 113r1 pwinfw pwiefn   "
+                  ",,,, qwdq ...  wpefj 1 2 !# *";
+  int expected = 8;
+  int actual = find_count_words_in_line(data_a);
+  ck_assert_int_eq(actual, expected);
 }
 END_TEST
-
 
 /**
  * Точка входу модуля тестування.
  *
- * Запускає розроблену функцію верифікації функції пошуку кількості повторів 
+ * Запускає розроблену функцію верифікації функції визначення кількості слів у
+ * строчці
  *
  * По завершенню тестів виводиться на екран резуміюча інформація про стан
  * проходження тестів.
@@ -60,12 +38,11 @@ END_TEST
  * @return стан проходження тестів: 1 - тести пройшли успішно, 0 - частина
  * тестів не пройшла
  */
-
 int main(void) {
   Suite *s = suite_create("Programing");
-  TCase *tc_core = tcase_create("Lab-10");
+  TCase *tc_core = tcase_create("Lab-12");
 
-  tcase_add_test(tc_core, test_get_count);
+  tcase_add_test(tc_core, test_find_count_words_in_line);
   suite_add_tcase(s, tc_core);
 
   SRunner *sr = srunner_create(s);
