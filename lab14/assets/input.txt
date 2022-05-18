@@ -1,0 +1,6 @@
+1 theme text sender sendermail reciever recievermail UTF-8
+0 theme2 text2 sender2 sendermail2 reciever2 recievermail2 UTF-16
+1 theme3 text3 sender3 sendermail3 reciever3 recievermail3 CP-1251
+0 theme3 text_one sender4 sendermail4 reciever4 recievermail4 UTF-8
+0 theme3 text_two sender4 sendermail4 reciever5 recievermail5 UTF-16
+1 theme3 text_three sender4 sendermail4 reciever6 recievermail6 UTF-16
